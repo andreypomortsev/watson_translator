@@ -4,7 +4,7 @@ french_to_english: Translates French to English.
 englich_to_french: Translates English to French. """
 
 import unittest
-import translator
+from machinetranslation import translator
 
 
 class TranslatorTest(unittest.TestCase):
