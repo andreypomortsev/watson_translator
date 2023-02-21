@@ -1,4 +1,8 @@
-import json
+""" This module translate French to English and English to French.
+
+french_to_english: Translates French to English. 
+englich_to_french: Translates English to French. """
+
 from ibm_watson import LanguageTranslatorV3
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 import os
@@ -19,20 +23,20 @@ translator = LanguageTranslatorV3(
 # Service location url
 translator.set_service_url(URL)
 
-def englishToFrench(englishText: str) -> str:
+def english_to_french(english_text: str) -> str:
     """Takes an english text and translate it to french"""
     #write the code here
-    if englishText == '':
-        return englishText
-    translation = translator.translate(text=englishText, model_id="en-fr")
-    frenchText = translation.get_result()["translations"][0]["translation"]
-    return frenchText
+    if english_text == '':
+        return english_text
+    translation = translator.translate(text=english_text, model_id="en-fr")
+    french_text = translation.get_result()["translations"][0]["translation"]
+    return french_text
 
-def frenchToEnglish(frenchText: str) -> str:
-    """Traslate frenchText to English, and returns the result"""
+def french_to_english(french_text: str) -> str:
+    """Traslate french_text to English, and returns the result"""
     #write the code here
-    if frenchText == '':
-        return frenchText
-    translation = translator.translate(text=frenchText, model_id="fr-en")
-    englishText = translation.get_result()["translations"][0]["translation"]
-    return englishText
+    if french_text == '':
+        return french_text
+    translation = translator.translate(text=french_text, model_id="fr-en")
+    english_text = translation.get_result()["translations"][0]["translation"]
+    return english_text

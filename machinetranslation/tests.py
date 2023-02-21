@@ -1,6 +1,7 @@
 """ This module tests two functions which translate French to English and English to French.
 
-frenchToEnglish: Translates French to English. englichToFrench: Translates English to French. """
+french_to_english: Translates French to English. 
+englich_to_french: Translates English to French. """
 
 import unittest
 import translator
@@ -10,20 +11,20 @@ class TranslatorTest(unittest.TestCase):
     """Test translator.py with empty str, and 'Hello'"""
 
     def test_empty_input_french_to_english(self):
-        """Test frenchToEnglish with an empty input"""
-        self.assertEqual(translator.frenchToEnglish(''), '')
+        """Test french_to_english with an empty input"""
+        self.assertEqual(translator.french_to_english(''), '')
 
     def test_bonjour_french_to_english(self):
-        """Test frenchToEnglish with 'Bonjour' as the input"""
-        self.assertEqual(translator.frenchToEnglish('Bonjour'), 'Hello')
+        """Test french_to_english with 'Bonjour' as the input"""
+        self.assertEqual(translator.french_to_english('Bonjour'), 'Hello')
 
     def test_empty_input_english_to_french(self):
-        """Test englishToFrench with an empty input"""
-        self.assertEqual(translator.englishToFrench(''), '')
+        """Test.english_to_french with an empty input"""
+        self.assertEqual(translator.english_to_french(''), '')
 
     def test_hello_english_to_french(self):
-        """Test englishToFrench with 'Hello' as the input"""
-        self.assertEqual(translator.englishToFrench('Hello'), 'Bonjour')
+        """Test.english_to_french with 'Hello' as the input"""
+        self.assertEqual(translator.english_to_french('Hello'), 'Bonjour')
 
 if __name__ == '__main__':
     unittest.main()
