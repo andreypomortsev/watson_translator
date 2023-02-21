@@ -19,7 +19,7 @@ translator = LanguageTranslatorV3(
 # Service location url
 translator.set_service_url(URL)
 
-def englishToFrench(englishText: str, translator=translator) -> str:
+def englishToFrench(englishText: str) -> str:
     """Takes an english text and translate it to french"""
     #write the code here
     if englishText == '':
@@ -28,7 +28,7 @@ def englishToFrench(englishText: str, translator=translator) -> str:
     frenchText = translation.get_result()["translations"][0]["translation"]
     return frenchText
 
-def frenchToEnglish(frenchText: str, translator=translator) -> str:
+def frenchToEnglish(frenchText: str) -> str:
     """Traslate frenchText to English, and returns the result"""
     #write the code here
     if frenchText == '':
