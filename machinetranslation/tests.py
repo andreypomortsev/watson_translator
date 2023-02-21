@@ -1,10 +1,14 @@
+""" This module tests two functions which translate French to English and English to French.
+
+frenchToEnglish: Translates French to English. englichToFrench: Translates English to French. """
+
 import unittest
 import translator
 
 
 class TranslatorTest(unittest.TestCase):
     """Test translator.py with empty str, and 'Hello'"""
-    
+
     def test_empty_input_french_to_english(self):
         """Test frenchToEnglish with an empty input"""
         self.assertEqual(translator.frenchToEnglish(''), '')
