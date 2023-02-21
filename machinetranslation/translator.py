@@ -22,6 +22,8 @@ translator.set_service_url(URL)
 def englishToFrench(englishText: str, translator=translator) -> str:
     """Takes an english text and translate it to french"""
     #write the code here
+    if englishText == '':
+        return englishText
     translation = translator.translate(text=englishText, model_id="en-fr")
     frenchText = translation.get_result()["translations"][0]["translation"]
     return frenchText
@@ -29,9 +31,8 @@ def englishToFrench(englishText: str, translator=translator) -> str:
 def frenchToEnglish(frenchText: str, translator=translator) -> str:
     """Traslate frenchText to English, and returns the result"""
     #write the code here
+    if frenchText == '':
+        return frenchText
     translation = translator.translate(text=frenchText, model_id="fr-en")
     englishText = translation.get_result()["translations"][0]["translation"]
     return englishText
-
-
-print('Success')
