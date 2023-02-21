@@ -4,6 +4,11 @@ french_to_english: Translates French to English.
 englich_to_french: Translates English to French. """
 
 import unittest
+import os
+import sys
+module_path = os.path.abspath(os.path.join('..'))
+if module_path not in sys.path:
+    sys.path.append(module_path)
 from machinetranslation import translator
 
 
