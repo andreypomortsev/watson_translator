@@ -31,7 +31,7 @@ def frenchToEnglish(frenchText: str, translator=translator) -> str:
     #write the code here
     translation = translator.translate(text=frenchText, model_id="fr-en")
     englishText = translation.get_result()["translations"][0]["translation"]
-    return english_text
+    return englishText
 
 
 print('Success')
