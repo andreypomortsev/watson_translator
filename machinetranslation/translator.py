@@ -3,9 +3,9 @@
 french_to_english: Translates French to English. 
 englich_to_french: Translates English to French. """
 
+import os
 from ibm_watson import LanguageTranslatorV3
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
-import os
 from dotenv import load_dotenv
 
 load_dotenv()
