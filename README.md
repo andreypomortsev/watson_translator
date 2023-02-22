@@ -11,7 +11,7 @@ This project is a Flask application that uses the Watson Language Translator API
 3. Sign up for IBM Watson services and get the service credentials
 4. Set the credentials in the application as environment variables `apikey`, `url`
 ## Usage
-To run the application, use python final_project/server.py in the terminal. The application will be running on http://localhost:8080.
+To run the application, use `python final_project/server.py` in the terminal. The application will be running on http://localhost:8080.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change. [Contribution guidelines for this project](docs/CONTRIBUTING.md)
